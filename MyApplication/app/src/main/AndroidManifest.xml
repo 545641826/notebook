@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example">
+     <!--android属性——定义命名空间 -->
+     <!--package属性——应用程序的身份证 -->
+
+    <!--application标签声明了每一个应用程序的组件及其属性-->
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/tubiao"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <!--icon="@drawable/tubiao"应用图标,drawable文件夹下的tubiao文件;-->
+        <!--MyApplication\app\src\main\res\drawable-->
+        <!--android:label="@string/app_name"我们看到的app名,string文件定义的app_name,此处可以直接用字符串代替.-->
+        <!--MyApplication\app\src\main\res\values\strings.xml-->
+        <!--android:theme="@style/AppTheme"app引用styles文件下名为AppTheme的界面主题-->
+        <!--MyApplication\app\src\main\res\values\styles.xml-->
+
+        <!--活动注册-->
+        <activity android:name="com.example.student">
+            <!--活动名为“student”，在java/com/example目录下。作为一个日记软件，这很不合理，暂时这样吧。-->
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+                <!--有上面两个标签的活动说明这是进入应用后的第一个活动-->
+            </intent-filter>
+        </activity>
+        <!--注册其他活动-->
+        <activity android:name="com.example.WriteActivity"></activity>
+        <activity android:name="com.example.addActivity"></activity>
+        <activity android:name="com.example.SearchView"></activity>
+    </application>
+
+</manifest>
+<!--下转java\com\example\student_info.java代码页-->
